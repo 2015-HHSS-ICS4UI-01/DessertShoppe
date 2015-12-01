@@ -5,17 +5,26 @@
  * 
  * @author YOURNAMEHERE
  */
-public class IceCream {
+public class IceCream extends DessertItem{
 
+    private String name;
+    private int cost;
+    
     public IceCream(String name, int cost)
     {
-        
+        this.name = name;
+        this.cost = cost;
     }
 
   
     public String toString()
     {
      return "";
+    }
+
+    @Override
+    public int getCost() {
+        return cost;
     }
     
 }
