@@ -11,20 +11,19 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Sundae{
+public class Sundae extends IceCream{
     
-
+    private String toppingName;
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+        super(icName, icCost + toppingCost);
+        this.toppingName = toppingName;
     }
-    
-
     
     public String toString()
     {
-        return "";
+        return super.toString();
     }
     
 }
