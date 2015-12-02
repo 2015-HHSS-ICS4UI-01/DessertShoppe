@@ -25,7 +25,7 @@ public class Candy extends DessertItem{
     }
     
     public double pricePerLbs(){
-        return this.pricePerLbs;
+        return this.pricePerLbs/100;
     }
     
     
@@ -39,7 +39,7 @@ public class Candy extends DessertItem{
     @Override
     public String toString()
     {
-       String output = this.weight() + " lbs. @" + this.pricePerLbs() + " /lb." + "\n";
+       String output = this.weight() + " lbs. @ $" + this.pricePerLbs() + " /lb." + "\n";
        output += super.getName();
        String preTax = DessertShoppe.cents2dollarsAndCents(this.getCost());
        int widthPreTax = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
