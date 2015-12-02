@@ -13,11 +13,16 @@
  */
 public class Sundae extends DessertItem{
     
-    
+    private String toppingName;
+    private int toppingCost;
+    private int icCost;
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       IceCream ic = new ic;
+       IceCream ic = new IceCream(icName,icCost);
+       this.toppingName = toppingName;
+       this.toppingCost = toppingCost;
+       this.icCost = ic.getCost();
     }
     
 
@@ -29,7 +34,7 @@ public class Sundae extends DessertItem{
 
     @Override
     public int getCost() {
-        
+        return this.icCost +this.toppingCost;
     }
     
 }

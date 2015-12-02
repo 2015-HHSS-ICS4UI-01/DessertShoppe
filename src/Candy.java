@@ -8,19 +8,22 @@
  */
 public class Candy extends DessertItem{
     
-
+    private String name;
     private double weight;
     private int pricePerLbs;
 
     public Candy(String name, double weight, int pricePerLbs)
     {
+        this.name = name;
         this.weight = weight;
         this.pricePerLbs = pricePerLbs;
     }
   
     public String toString()
     {
-       return "";
+       return ""+ name + this.pricePerLbs + "\n"
+               + "";
+               
     }
 
     @Override
