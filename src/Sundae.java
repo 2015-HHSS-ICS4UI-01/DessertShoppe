@@ -9,15 +9,15 @@
  * 
  * Remember, we can use IceCream to do some of the heavy lifting for us!
  * 
- * @author YOURNAMEHERE
+ * @author Nitin
  */
-public class Sundae{
+public class Sundae extends DessertItem{
     
-
+    
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+       IceCream ic = new ic;
     }
     
 
@@ -25,6 +25,11 @@ public class Sundae{
     public String toString()
     {
         return "";
+    }
+
+    @Override
+    public int getCost() {
+        
     }
     
 }
