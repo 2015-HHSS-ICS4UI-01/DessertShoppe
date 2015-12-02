@@ -8,12 +8,11 @@
  * @author YOURNAMEHERE
  */
 public class Cookie extends DessertItem{
-    
+    private int pricePer12;
     
     public Cookie(String name, int number, int pricePer12)
     {
         super(name);
-        
     }
 
     
@@ -25,7 +24,7 @@ public class Cookie extends DessertItem{
 
     @Override
     public int getCost() {
-        
+        return pricePer12;
     }
     
 }

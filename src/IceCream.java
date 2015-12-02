@@ -24,7 +24,9 @@ public class IceCream extends DessertItem{
     }
 
     
+    
     public int getCost() {
+        
         return this.icCost;
         
     }
