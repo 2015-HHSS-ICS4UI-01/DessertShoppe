@@ -7,17 +7,17 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Cookie {
+public class Cookie extends DessertShoppe {
     
     
-    public Cookie(String name, int number, int pricePer12)
-    {
+    public Cookie(String name, int number, int pricePer12){
+    
         
     }
 
     
-    public String toString()
-    {
+    public String toString(){
+    
         return "";
     }
     

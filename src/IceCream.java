@@ -5,16 +5,16 @@
  * 
  * @author YOURNAMEHERE
  */
-public class IceCream {
+public class IceCream extends DessertShoppe {
 
-    public IceCream(String name, int cost)
-    {
+    public IceCream(String name, int cost){
         
     }
 
   
-    public String toString()
-    {
+    public String toString(){
+     
+        
      return "";
     }
     
