@@ -22,7 +22,7 @@ public class Candy extends DessertItem{
     {
         String output = weight + "lbs. @ $" + DessertShoppe.cents2dollarsAndCents(pricePerLbs) + " /lb.";
         output += "\n" + super.getName();
-        output += String.format("%" + (DessertShoppe.RECEIPT_WIDTH - super.getName().length()) + "s%n", getCost());
+        output += String.format("%" + (DessertShoppe.RECEIPT_WIDTH - super.getName().length()) + "s%n", DessertShoppe.cents2dollarsAndCents(getCost()));
         return output;
     }
 
