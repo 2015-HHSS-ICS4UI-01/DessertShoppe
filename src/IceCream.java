@@ -4,7 +4,7 @@
  *
  * IceCream has a name, and a cost associated with it.
  *
- * @author YOURNAMEHERE
+ * @author branc2347
  */
 public class IceCream extends DessertItem {
 
@@ -18,7 +18,10 @@ public class IceCream extends DessertItem {
 
     @Override
     public String toString() {
-        return name + " Ice Cream";
+        String output = "";
+        output+= super.getName();
+        output+= String.format("%" + (DessertShoppe.RECEIPT_WIDTH - super.getName().length()) + "s", DessertShoppe.cents2dollarsAndCents(getCost()));
+        return output;
     }
 
     @Override

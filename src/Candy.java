@@ -5,7 +5,7 @@
  * A Candy has a name, a weight (in pounds), and a price per pound. The weight
  * and price per pound are used to calculate the cost of the Candy.
  *
- * @author YOURNAMEHERE
+ * @author branc2347
  */
 public class Candy extends DessertItem {
 
@@ -21,11 +21,14 @@ public class Candy extends DessertItem {
 
     @Override
     public String toString() {
-        return weight + " lbs. " + "@ " + pricePerLbs + " /lb." + "\n" + name;
+        String output = "";
+        output += weight + " lbs. " + "@ " + pricePerLbs + " /lb." + "\n" + super.getName();
+        output += String.format("%" + (DessertShoppe.RECEIPT_WIDTH - super.getName().length()) + "s", DessertShoppe.cents2dollarsAndCents(getCost()));
+        return output;
     }
 
     @Override
     public int getCost() {
-        return (int) (weight * pricePerLbs);
+        return (int) Math.round(weight * pricePerLbs);
     }
 }

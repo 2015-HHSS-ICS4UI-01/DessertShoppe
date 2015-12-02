@@ -8,7 +8,7 @@
  *
  * Remember, we can use IceCream to do some of the heavy lifting for us!
  *
- * @author YOURNAMEHERE
+ * @author branc2347
  */
 public class Sundae extends IceCream {
 
@@ -23,12 +23,16 @@ public class Sundae extends IceCream {
         this.toppingName = toppingName;
     }
 
+    @Override
     public String toString() {
-        return toppingName + " Sundae with" + "\n" + icName + " Ice Cream";
+        String output = "";
+        output += toppingName + " Sundae with" + "\n" + super.getName();
+        output += String.format("%" + (DessertShoppe.RECEIPT_WIDTH - super.getName().length()) + "s", DessertShoppe.cents2dollarsAndCents(getCost()));
+        return output;
     }
 
     @Override
     public int getCost() {
-        return (icCost + toppingCost);
+        return (super.getCost() + toppingCost);
     }
 }
