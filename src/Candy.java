@@ -6,18 +6,24 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Candy {
+public class Candy extends DessertItem{
     
 
     public Candy(String name, double weight, int pricePerLbs)
     {
-
+        super(name,weight);
     }
 
  
     
     public String toString()
     {
+        
        return "";
+    }
+
+    @Override
+    public int getCost() {
+        return pricePerLbs;
     }
 }
