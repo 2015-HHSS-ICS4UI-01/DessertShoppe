@@ -12,11 +12,12 @@ public class Cookie extends DessertItem{
     
     public Cookie(String name, int number, int pricePer12)
     {
-        super(name,number);
+        super(name);
         
     }
 
     
+    @Override
     public String toString()
     {
         return "";

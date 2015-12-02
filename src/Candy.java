@@ -11,11 +11,12 @@ public class Candy extends DessertItem{
 
     public Candy(String name, double weight, int pricePerLbs)
     {
-        super(name,weight);
+        super(name);
     }
 
  
     
+    @Override
     public String toString()
     {
         

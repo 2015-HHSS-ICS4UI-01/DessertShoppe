@@ -17,11 +17,12 @@ public class Sundae extends IceCream{
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       super(icName,icCost,toppingName,toppingCost);
+       super(icName);
     }
     
 
     
+    @Override
     public String toString()
     {
         return "";

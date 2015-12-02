@@ -7,12 +7,17 @@
  */
 public class IceCream extends DessertItem{
 
+    private String name;
+    private int cost;
+    
     public IceCream(String name, int cost)
     {
-        super(name ,cost);
+        this.name = name;
+        this.cost = cost;
     }
 
   
+    @Override
     public String toString()
     {
      return "";
@@ -20,6 +25,7 @@ public class IceCream extends DessertItem{
 
     @Override
     public int getCost() {
+        return 0;
         
     }
     
