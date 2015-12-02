@@ -7,18 +7,27 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Cookie {
+public class Cookie extends DessertItem{
+    private int number;
+    private int pricePer;
     
     
     public Cookie(String name, int number, int pricePer12)
     {
-        
+        super(name);
+        this.number = number;
+        this.pricePer = pricePer12;
     }
 
     
     public String toString()
     {
         return "";
+    }
+
+    @Override
+    public int getCost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

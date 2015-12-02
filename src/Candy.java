@@ -6,12 +6,16 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Candy {
+public class Candy extends DessertItem{
+    private double weight;
+    private int price;
     
 
     public Candy(String name, double weight, int pricePerLbs)
     {
-
+        super(name);
+        this.weight = weight;
+        this.price = pricePerLbs;
     }
 
  
@@ -19,5 +23,10 @@ public class Candy {
     public String toString()
     {
        return "";
+    }
+
+    @Override
+    public int getCost() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
