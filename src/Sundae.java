@@ -9,18 +9,26 @@
  * 
  * Remember, we can use IceCream to do some of the heavy lifting for us!
  * 
- * @author YOURNAMEHERE
+ * @author Jonah Janakovic
  */
-public class Sundae{
+public class Sundae extends IceCream{
     
+    private String toppingName;
+    private int toppingCost;
+    public int cost;
 
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+       super(icName,icCost);
+       this.toppingName = toppingName;
+       this.toppingCost = toppingCost;
     }
     
-
+    public int getCost(){
+        cost = 
+        return cost;
+    }
     
     public String toString()
     {
