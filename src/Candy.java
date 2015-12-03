@@ -44,6 +44,10 @@ public class Candy extends DessertItem {
                 + " /lb.\n" + super.getName() + String.format("%" + width + "s", amount);
     }
 
+    /**
+     * Getter for the total cost of the Candy
+     * @return the cost of the candy
+     */
     @Override
     public int getCost() {
         return cost;

@@ -46,6 +46,10 @@ public class Cookie extends DessertItem {
 
     }
 
+    /**
+     * Getter for the total cost of the Cookie(s)
+     * @return the cost of the cookie(s)
+     */
     @Override
     public int getCost() {
         return cost;

@@ -36,6 +36,10 @@ public class IceCream extends DessertItem {
         return super.getName() + String.format("%" + width + "s", amount);
     }
 
+    /**
+     * Getter for the total cost of the Ice Cream
+     * @return the cost of the ice cream
+     */
     @Override
     public int getCost() {
         return cost;
