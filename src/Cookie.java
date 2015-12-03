@@ -10,6 +10,8 @@
 public class Cookie extends DessertItem{
     private int number;
     private int pricePer;
+    private int price;
+    private int cost;
     
     
     public Cookie(String name, int number, int pricePer12)
@@ -17,17 +19,24 @@ public class Cookie extends DessertItem{
         super(name);
         this.number = number;
         this.pricePer = pricePer12;
+       cost = ((number * pricePer) / 12);
+       
     }
 
     
     public String toString()
     {
-        return "";
+        String name = super.getName();
+       String output = "";
+      output += number + " @ $" +DessertShoppe.cents2dollarsAndCents(pricePer)+ " /dz. \n" ;
+       int widthItem = DessertShoppe.RECEIPT_WIDTH - name.length();
+         output += super.getName() + String.format("%" + widthItem + "s", 
+                 DessertShoppe.cents2dollarsAndCents(cost)); 
+         return output;
     }
 
     @Override
     public int getCost() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       return cost;
     }
-    
 }

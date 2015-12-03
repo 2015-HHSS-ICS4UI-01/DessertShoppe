@@ -13,18 +13,34 @@
  */
 public class Sundae extends IceCream{
     
+    private String name;
+    private int cost;
 
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+       super(icName, icCost);
+       this.cost = toppingCost;
+       this.name = toppingName;
+       cost = cost + super.getCost();
     }
     
 
     
     public String toString()
     {
-        return "";
+         String name = super.getName();
+       String output = "";
+       int widthItem = DessertShoppe.RECEIPT_WIDTH - name.length();
+       output += this.name + " with \n" ;
+         output += super.getName() + String.format("%" + widthItem + "s", 
+                 DessertShoppe.cents2dollarsAndCents(cost)); 
+        return output;
+    }
+    
+     @Override
+    public int getCost() {
+        return cost;
     }
     
 }

@@ -9,6 +9,8 @@
 public class Candy extends DessertItem{
     private double weight;
     private int price;
+    private int cost;
+    
     
 
     public Candy(String name, double weight, int pricePerLbs)
@@ -16,17 +18,24 @@ public class Candy extends DessertItem{
         super(name);
         this.weight = weight;
         this.price = pricePerLbs;
+        cost = (int) Math.round(weight * price);
     }
 
  
     
     public String toString()
     {
-       return "";
+       String name = super.getName();
+       String output = "";
+      output += weight + " lbs. @ $" +DessertShoppe.cents2dollarsAndCents(price)+ " /lb. \n" ;
+       int widthItem = DessertShoppe.RECEIPT_WIDTH - name.length();
+         output += super.getName() + String.format("%" + widthItem + "s", 
+                 DessertShoppe.cents2dollarsAndCents(cost)); 
+        return output;
     }
 
     @Override
     public int getCost() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return cost;     
     }
 }

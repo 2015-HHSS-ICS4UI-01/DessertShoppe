@@ -7,20 +7,27 @@
  */
 public class IceCream extends DessertItem{
 
+    private int cost;
+    
     public IceCream(String name, int cost)
     {
         super(name);
+        this.cost = cost;
     }
 
   
     public String toString()
     {
-     return "";
+     String name = super.getName();
+       String output = "";
+       int widthItem = DessertShoppe.RECEIPT_WIDTH - name.length();
+         output += super.getName() + String.format("%" + widthItem + "s", 
+                 DessertShoppe.cents2dollarsAndCents(cost)); 
+        return output;
     }
 
     @Override
     public int getCost() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return cost;
     }
-    
 }
