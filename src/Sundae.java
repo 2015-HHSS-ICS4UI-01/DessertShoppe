@@ -9,22 +9,28 @@
  * 
  * Remember, we can use IceCream to do some of the heavy lifting for us!
  * 
- * @author YOURNAMEHERE
+ * @author donet6376
  */
-public class Sundae{
+public class Sundae extends IceCream{
     
-
+    private String toppingName;
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+       super(icName,icCost + toppingCost);
+       this.toppingName = toppingName;
     }
     
 
     
     public String toString()
     {
-        return "";
+        String amount = DessertShoppe.cents2dollarsAndCents(super.getCost());
+        // format the spacing for the tax amount
+        // we subtract 3 because of the 3 letters in Tax
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+       
+        return toppingName + " Sundae with\n" + super.getName() + String.format("%" + width + "s", amount);
     }
     
 }
