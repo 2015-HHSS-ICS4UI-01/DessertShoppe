@@ -27,7 +27,7 @@ public class Cookie extends DessertItem{
         return "";
     }
 
-    public int amount() {
+    public int getNumber() {
         return number;
     }
     

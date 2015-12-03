@@ -23,13 +23,19 @@ public class Candy extends DessertItem{
     @Override
     public String toString()
     {
-        
-       return "";
+        String output = "\n";
+        output += "Name: " + super.getName() + "\n";
+//        output += "Age: " + super.getAge() + "\n";
+//        output += "Gender: " + super.getGender() + "\n";
+        return output;
+//       return "";
     }
 
-    public double weight() {
+
+    public double getWeight() {
         return weight;
     }
+    
     
     public int getCost() {
         return pricePerLbs;
