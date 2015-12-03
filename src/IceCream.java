@@ -5,17 +5,27 @@
  * 
  * @author YOURNAMEHERE
  */
-public class IceCream {
+public class IceCream extends DessertItem {
+    private int cost;
 
     public IceCream(String name, int cost)
     {
-        
+        super(name);
+        this.cost = cost;
     }
 
   
     public String toString()
     {
-     return "";
+     String output = super.getName(); 
+        int widthPrice = DessertShoppe.RECEIPT_WIDTH - super.getName().length() ;
+        output +=  String.format("%"+ widthPrice + "s", DessertShoppe.cents2dollarsAndCents(getCost()));
+        return output;
+    }
+
+    @Override
+    public int getCost() {
+        return cost;
     }
     
 }
