@@ -19,7 +19,9 @@ public class IceCream extends DessertItem{
     @Override
     public String toString()
     {
-     return "";
+        String output = "\n";
+        output += "Name: " + super.getName() + "\n";
+        return "";
     }
 
     

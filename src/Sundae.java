@@ -30,6 +30,8 @@ public class Sundae extends IceCream{
     @Override
     public String toString()
     {
+        String output = "\n";
+        output += "Name: " + super.getName() + "\n";
         return "";
     }
     

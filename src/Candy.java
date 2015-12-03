@@ -24,9 +24,8 @@ public class Candy extends DessertItem{
     public String toString()
     {
         String output = "\n";
-        output += "Name: " + super.getName() + "\n";
-//        output += "Age: " + super.getAge() + "\n";
-//        output += "Gender: " + super.getGender() + "\n";
+        
+        output += super.getName() +  getCost() + "\n";
         return output;
 //       return "";
     }

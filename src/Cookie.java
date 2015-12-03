@@ -24,6 +24,8 @@ public class Cookie extends DessertItem{
     @Override
     public String toString()
     {
+        String output = "\n";
+        output += "Name: " + super.getName() + "\n";
         return "";
     }
 
