@@ -8,11 +8,16 @@
  * @author YOURNAMEHERE
  */
 public class Cookie extends DessertItem{
+    
+    private int number;
     private int pricePer12;
     
     public Cookie(String name, int number, int pricePer12)
     {
         super(name);
+        this.number = number;
+        this.pricePer12 = pricePer12;
+        
     }
 
     
@@ -22,7 +27,10 @@ public class Cookie extends DessertItem{
         return "";
     }
 
-    @Override
+    public int amount() {
+        return number;
+    }
+    
     public int getCost() {
         return pricePer12;
     }

@@ -13,11 +13,15 @@
  */
 public class Sundae extends IceCream{
     
+    private String toppingName;
+    private int toppingCost;
 
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+       super(icName,icCost);
+       this.toppingName = toppingName;
+       this.toppingCost = toppingCost;
     }   
     
     

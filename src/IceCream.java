@@ -7,12 +7,11 @@
  */
 public class IceCream extends DessertItem{
 
-    private String icName;
     private int icCost;
     
     public IceCream(String name, int cost)
     {
-        this.icName = name;
+        super(name);
         this.icCost = cost;
     }
 
@@ -23,6 +22,7 @@ public class IceCream extends DessertItem{
      return "";
     }
 
+    
     
     
     public int getCost() {
