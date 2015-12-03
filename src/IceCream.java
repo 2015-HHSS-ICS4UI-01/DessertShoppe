@@ -12,7 +12,6 @@ public class IceCream extends DessertItem {
     private double cost;
 
     /**
-     *
      * @param name is the name of the ice cream
      * @param cost is the cost of the ice cream
      */
@@ -23,7 +22,6 @@ public class IceCream extends DessertItem {
     }
 
     /**
-     *
      * @returns the cost of the ice cream
      */
     public double cost() {

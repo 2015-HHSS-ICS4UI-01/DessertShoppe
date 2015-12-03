@@ -42,7 +42,6 @@ public class Sundae extends DessertItem {
     }
 
     /**
-     *
      * @returns the topping name
      */
     public String toppingName() {
@@ -50,7 +49,6 @@ public class Sundae extends DessertItem {
     }
 
     /**
-     *
      * @returns the topping cost
      */
     public int toppingCost() {
@@ -58,7 +56,6 @@ public class Sundae extends DessertItem {
     }
 
     /**
-     *
      * @returns what to print out to the screen
      */
     public String toString() {
@@ -68,11 +65,9 @@ public class Sundae extends DessertItem {
         int widthPreTax = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
         output += String.format("%" + widthPreTax + "s", preTax);
         return output;
-
     }
 
     /**
-     *
      * @returns the cost of the final sundae
      */
     @Override
