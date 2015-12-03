@@ -31,11 +31,11 @@ public class Candy extends DessertItem {
     
     @Override
     public String toString(){
-        String output = this.weight() + "lbs. @" + this.pricePerLbs() + "/lb." + "\n";
+        String output = this.weight() + " lbs. @" + pricePerLbs / 100 + " /lb. " + "\n";
         output += super.getName();
         String preTax = DessertShoppe.cents2dollarsAndCents(this.getCost());
         int widthPreTax = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
-        output += String.format("%" + widthPreTax + "s%n", preTax);
+        output += String.format("%" + widthPreTax + "s", preTax);
         return output;
     }
 

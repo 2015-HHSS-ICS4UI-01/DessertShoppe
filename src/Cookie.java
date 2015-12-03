@@ -7,18 +7,41 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Cookie extends DessertShoppe {
+public class Cookie extends DessertItem {
     
+    private String name;
+    private int number;
+    private double pricePer12;
     
     public Cookie(String name, int number, int pricePer12){
-    
+        super(name);
+        this.number = number;
+        this.pricePer12 = pricePer12;
         
+    }
+    
+    public int number(){
+        return this.number;
+    }
+    
+    public double pricePer12(){
+        return this.pricePer12;
     }
 
     
     public String toString(){
-    
-        return "";
+        String output = this.number + " @ " + "$" + pricePer12 / 100 + " /dz " + "\n";
+        output += super.getName();
+        String preTax = DessertShoppe.cents2dollarsAndCents(this.getCost());
+        int widthPreTax = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+        output += String.format("%" + widthPreTax + "s", preTax);
+        return output;
+       
+    }
+
+    @Override
+    public int getCost() {
+        return (int)Math.round(number * pricePer12 / 12);
     }
     
 }
