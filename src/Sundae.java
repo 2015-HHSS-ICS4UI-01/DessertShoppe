@@ -33,4 +33,12 @@ public class Sundae extends IceCream{
         return "";
     }
     
+    public String getToppingName(){
+        return this.toppingName;
+    }
+    
+    public int getToppingCost(){
+        return this.toppingCost;
+    }
+ 
 }
