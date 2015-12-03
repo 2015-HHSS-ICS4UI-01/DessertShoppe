@@ -11,6 +11,7 @@ public class Candy extends DessertItem{
     private double weight;
     private int cost;
 
+
     public Candy(String name, double weight, int pricePerLbs)
     {
         super(name);
@@ -20,7 +21,12 @@ public class Candy extends DessertItem{
     
     @Override
     public int getCost(){
-        cost = (int)Math.round((weight*pricePerLbs));
+        int temp = (int)(Math.floor(weight))*pricePerLbs;
+        System.out.println(temp + "------");
+        int tempe = (int)Math.round((weight - (Math.floor(weight)))*pricePerLbs);
+        System.out.println(tempe + "+++++");
+        cost = temp + tempe;
+        System.out.println(cost+ "====");
         return cost;
     }
 
@@ -28,7 +34,12 @@ public class Candy extends DessertItem{
     
     public String toString()
     {
-        
-       return "";
+       String Output = "";
+       Output = weight + " lbs." + " @ $" + DessertShoppe.cents2dollarsAndCents(pricePerLbs) + "/lb.\n";
+       Output += super.getName() + DessertShoppe.cents2dollarsAndCents(cost);
+       return Output;
+       String preTax = DessertShoppe.cents2dollarsAndCents(preCost);
+        int widthPreTax = DessertShoppe.RECEIPT_WIDTH - 8;
+        output += String.format("%" + widthPreTax + "s%n", preTax);
     }
 }

@@ -12,7 +12,6 @@
  * @author Jonah Janakovic
  */
 public class Sundae extends IceCream{
-    
     private String toppingName;
     private int toppingCost;
     public int cost;
@@ -26,7 +25,8 @@ public class Sundae extends IceCream{
     }
     
     public int getCost(){
-        cost = 
+        
+        cost = super.getCost() + toppingCost;
         return cost;
     }
     
