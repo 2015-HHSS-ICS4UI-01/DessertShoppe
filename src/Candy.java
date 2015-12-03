@@ -37,7 +37,7 @@ public class Candy extends DessertItem {
      */
     public String toString() {
         String amount = DessertShoppe.cents2dollarsAndCents(cost);
-        // format the spacing for the tax amount
+        // format the spacing for total amount
         int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
         //the information that will be displayed
         return weight + " lbs. @ $" + DessertShoppe.cents2dollarsAndCents(pricePerLbs)

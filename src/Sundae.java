@@ -36,7 +36,7 @@ public class Sundae extends IceCream {
      */
     public String toString() {
         String amount = DessertShoppe.cents2dollarsAndCents(super.getCost());
-        // format the spacing for the tax amount
+        // format the spacing for the total amount
         int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
         //the information that will be displayed
         return toppingName + " Sundae with\n" + super.getName() + String.format("%" + width + "s", amount);
