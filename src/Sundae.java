@@ -41,11 +41,16 @@ public class Sundae extends IceCream {
         //the width of the whitespace based on the name of the ice cream
         int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
         
-        //
+        //the second has the name of the ice cream as well as the formatted total price
         String secondLine = super.getName() + String.format("%" + width + "s", DessertShoppe.cents2dollarsAndCents(getCost()));
+        
         return firstLine + secondLine;
     }
 
+    /**
+     * Getter for the total cost of the sundae
+     * @return the cost of the topping added to the cost of the ice cream
+     */
     public int getCost() {
         return Math.round(super.getCost() + toppingCost);
     }

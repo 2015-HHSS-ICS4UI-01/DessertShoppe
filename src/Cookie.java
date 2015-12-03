@@ -32,7 +32,7 @@ public class Cookie extends DessertItem {
      */
     public String toString() {
         //the first line states the number of cookies bought at a certain price per dozen
-        String firstLine = number + " @ " + DessertShoppe.cents2dollarsAndCents(pricePer12) + " /dz";
+        String firstLine = number + " @ $" + DessertShoppe.cents2dollarsAndCents(pricePer12) + " /dz";
         
         //determining how much white space is between the name and the price based on the length of the name
         int whiteSpaceWidth = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
