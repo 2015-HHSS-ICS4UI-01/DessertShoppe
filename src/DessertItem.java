@@ -10,7 +10,7 @@
  */
 public abstract class DessertItem {
   
-  private String name;
+  String name;
   
 /**
  * Null constructor for DessertItem class

@@ -5,7 +5,7 @@
  * the price per dozen cookies. 
  * The number and price per dozen are used to calculate the cost of the cookies.
  * 
- * @author YOURNAMEHERE
+ * @author thompsont
  */
 public class Cookie extends DessertItem{
     private int number;
@@ -13,7 +13,12 @@ public class Cookie extends DessertItem{
     private int price;
     private int cost;
     
-    
+    /**
+     * 
+     * @param name
+     * @param number
+     * @param pricePer12 
+     */
     public Cookie(String name, int number, int pricePer12)
     {
         super(name);
@@ -23,7 +28,10 @@ public class Cookie extends DessertItem{
        
     }
 
-    
+    /**
+     * Returns the information about the cookie(s) and its/their price
+     * @return information about the cookie(s) and prices
+     */
     public String toString()
     {
         String name = super.getName();
@@ -34,7 +42,10 @@ public class Cookie extends DessertItem{
                  DessertShoppe.cents2dollarsAndCents(cost)); 
          return output;
     }
-
+    /**
+     * Returns cost of the Cookie(s)
+     * @return cost of the cookie(s)
+     */
     @Override
     public int getCost() {
        return cost;
