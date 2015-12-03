@@ -3,19 +3,35 @@
  * 
  * IceCream has a name, and a cost associated with it.
  * 
- * @author YOURNAMEHERE
+ * @author Vonhn0812
  */
-public class IceCream {
-
+public class IceCream extends DessertItem {
+    private int cost;
     public IceCream(String name, int cost)
     {
-        
+       super(name);
+       this.cost = cost;
     }
 
   
     public String toString()
     {
-     return "";
+     int width = DessertShoppe.RECEIPT_WIDTH;
+       width-= super.getName().length();
+       width-= DessertShoppe.cents2dollarsAndCents(this.getCost()).length();
+       String n = super.getName();
+        for (int i = 0; i < width; i++) {
+            n+=" ";
+        }
+       n+=DessertShoppe.cents2dollarsAndCents(this.getCost());
+       return n;
     }
+
+    @Override
+    public int getCost() {
+        return cost;
+    }
+    
+    
     
 }
