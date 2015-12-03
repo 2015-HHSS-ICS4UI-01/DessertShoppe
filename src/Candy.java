@@ -29,7 +29,7 @@ public class Candy extends DessertItem {
     public String toString() {
         String output = ""; //create the string to be printed
         //add all the relevant information about the candy
-        output += weight + " lbs. " + "@ " + pricePerLbs + " /lb." + "\n" + super.getName();
+        output += weight + " lbs. " + "@ $" + DessertShoppe.cents2dollarsAndCents(pricePerLbs) + " /lb." + "\n" + super.getName();
         //now add the price before tax of that specific candy, formatting to ensure all line up
         output += String.format("%" + (DessertShoppe.RECEIPT_WIDTH - super.getName().length()) + "s", DessertShoppe.cents2dollarsAndCents(getCost()));
         return output;
