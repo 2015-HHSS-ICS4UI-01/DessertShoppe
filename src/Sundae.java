@@ -9,7 +9,7 @@
  * 
  * Remember, we can use IceCream to do some of the heavy lifting for us!
  * 
- * @author YOURNAMEHERE
+ * @author Leo Yao
  */
 public class Sundae extends IceCream{
     
