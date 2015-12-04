@@ -17,7 +17,7 @@ public class Sundae extends IceCream {
     private int toppingCost;
 
     /**
-     * Constructor for sundae
+     * Constructor for sundae class
      * @param icName name of the ice cream
      * @param icCost cost of the ice cream
      * @param toppingName name of the sundae topping
