@@ -17,17 +17,22 @@ public class Cookie extends DessertItem {
         super(name);
         this.numberOfCookie = number;
         this.pricePer12 = pricePer12;
+        cost = (numberOfCookie*pricePer12)/12;
     }
 
     
     public String toString()
     {
-        return "";
+        String costS = DessertShoppe.cents2dollarsAndCents(cost);
+        String output= "" +numberOfCookie +" @ $"+DessertShoppe.cents2dollarsAndCents(pricePer12) +" /dz"+"\n";
+        output += super.getName();
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+        output += String.format("%" + width + "s", costS);
+        return output;
     }
 
     @Override
     public int getCost() {
-        cost = (numberOfCookie*pricePer12)/12;
         return cost;
     }
     

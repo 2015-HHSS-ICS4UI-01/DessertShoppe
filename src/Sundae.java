@@ -20,17 +20,22 @@ public class Sundae extends IceCream{
         super(icName, icCost);
         this.toppingName = toppingName;
         this.toppingCost = toppingCost;
+        this.cost = super.getCost()+toppingCost;
     }
     
 
     
     public String toString()
     {
-        return "";
+        String costS = DessertShoppe.cents2dollarsAndCents(getCost());
+        String output= toppingName +" Sundae with"+"\n";
+        output += super.getName();
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+        output += String.format("%" + width + "s", costS);
+        return output;
     }
     
     public int getCost(){
-        this.cost= super.getCost()+toppingCost;
         return cost;
     }
     

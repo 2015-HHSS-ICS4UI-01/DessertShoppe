@@ -17,13 +17,15 @@ public class IceCream extends DessertItem{
   
     public String toString()
     {
-     return "";
+        String costS = DessertShoppe.cents2dollarsAndCents(cost);
+        String output = super.getName();
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+        output += String.format("%" + width + "s", costS);
+        return output;
     }
 
     @Override
     public int getCost() {
-        cost = cost;
         return cost;
     }
-    
 }

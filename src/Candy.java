@@ -7,7 +7,6 @@
  * @author YOURNAMEHERE
  */
 public class Candy extends DessertItem {
-    private String name;
     private double weight;
     private int pricePerLbs;
     private int cost;
@@ -17,22 +16,23 @@ public class Candy extends DessertItem {
         super(name);
         this.weight = weight;
         this.pricePerLbs = pricePerLbs;
+        cost = (int)Math.round(weight*pricePerLbs);
     }
 
  
     
     public String toString()
     {
+        String costS = DessertShoppe.cents2dollarsAndCents(cost);
         String output= "" +weight +" lbs. @ $"+DessertShoppe.cents2dollarsAndCents(pricePerLbs) +" /lb."+"\n";
-        String temp = DessertShoppe.cents2dollarsAndCents(cost);
-        int widthTotal = DessertShoppe.RECEIPT_WIDTH - 5;
-        output +="" +name +DessertShoppe.cents2dollarsAndCents(cost);
-        return "";
+        output += super.getName();
+        int width = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+        output += String.format("%" + width + "s", costS);
+        return output;
     }
 
     @Override
     public int getCost() {
-        cost = (int)Math.round(weight*pricePerLbs);
         return cost;
     }
 }
