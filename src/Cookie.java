@@ -26,7 +26,7 @@ public class Cookie extends DessertItem{
     {
         String output = "\n";
         output += number + " lbs. $" + pricePer12 + "/dz\n";
-        output += "Name: " + super.getName() + "\n";
+        output += super.getName() + "   " + getCost() + "\n";
         return output;
     }
 

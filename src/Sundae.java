@@ -32,7 +32,7 @@ public class Sundae extends IceCream{
     public String toString()
     {
         String output = "\n";
-        output += "Name: " + super.getName() + "\n";
+        output += super.getName() + "\n";
         return output;
     }
     
