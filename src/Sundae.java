@@ -15,6 +15,7 @@ public class Sundae extends IceCream{
     
     private String toppingName;
     private int toppingCost;
+    private int icCost;
 
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
@@ -40,7 +41,9 @@ public class Sundae extends IceCream{
     }
     
     public int getToppingCost(){
-        return this.toppingCost;
+        int cost = (int)Math.round(toppingCost + icCost/100.0);
+        return cost;
+        
     }
  
 }
