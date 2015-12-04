@@ -15,7 +15,13 @@ public class Sundae extends DessertItem{
     private IceCream iceCream;
     private int costTopping;
 
-    
+    /**
+     * Constructor for the Sundae.
+     * @param icName the name of the sundae's ice cream.
+     * @param icCost the cost of the sundae's ice cream.
+     * @param toppingName the name of the sundae's topping.
+     * @param toppingCost the cost of the sundae's topping.
+     */
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
         super(toppingName);
@@ -24,17 +30,31 @@ public class Sundae extends DessertItem{
     }
     
 
-    
+    /**
+     * Converts the Sundae object into readable text.
+     * @return the name and cost of the ice cream in receipt form.
+     */
     public String toString()
     {
+        //the width of blank space between the sundae's name and its total cost
+        int widthCost = DessertShoppe.RECEIPT_WIDTH - iceCream.getName().length();
+        //a string that holds the sundae's section on the receipt
         String output = super.getName() + " Sundae with \n";
         output += iceCream.getName();
+        output += String.format("%" + widthCost + "s",
+                DessertShoppe.cents2dollarsAndCents(this.getCost()));
         return output;
     }
 
+    /**
+     * Returns the cost of the sundae.
+     * @return the price of the sundae.
+     */
     @Override
     public int getCost() {
-        return costTopping + iceCream.getCost();
+        //adds the cost of the ice cream and the price of the topping
+        //to find the total cost of the sundae
+        return Math.round(costTopping + iceCream.getCost());
     }
     
 }
