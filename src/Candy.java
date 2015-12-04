@@ -25,9 +25,9 @@ public class Candy extends DessertItem{
     public String toString()
     {
         String output = "\n";
-        double price = pricePerLbs / 100;
+        int cost = (int)Math.round(weight * pricePerLbs/100.0);
         output += weight + " lbs. $" + price + "/lb\n";
-        output += super.getName() + "   " + getCost() + "\n";
+        output += super.getName() + "   " + cost + "\n";
         return output;
 //       return "";
     }
@@ -39,7 +39,7 @@ public class Candy extends DessertItem{
     
     
     public int getCost() {
-        int cost = (int)Math.round(weight * pricePerLbs/100.0);
+        cost = weight * pricePerLbs;
         return cost;
     }
 }
