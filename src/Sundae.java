@@ -9,22 +9,32 @@
  * 
  * Remember, we can use IceCream to do some of the heavy lifting for us!
  * 
- * @author YOURNAMEHERE
+ * @author besem4079
  */
-public class Sundae{
-    
+public class Sundae extends DessertItem{
+    private IceCream iceCream;
+    private int costTopping;
 
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+        super(toppingName);
+        iceCream = new IceCream(icName,icCost);
+        this.costTopping = toppingCost;
     }
     
 
     
     public String toString()
     {
-        return "";
+        String output = super.getName() + " Sundae with \n";
+        output += iceCream.getName();
+        return output;
+    }
+
+    @Override
+    public int getCost() {
+        return costTopping + iceCream.getCost();
     }
     
 }
