@@ -10,14 +10,13 @@
 public class Cookie extends DessertItem{
     private int number;
     private int pricePer;
-    private int price;
     private int cost;
     
     /**
-     * 
-     * @param name
-     * @param number
-     * @param pricePer12 
+     * Creates a new cookie
+     * @param name the name of the cookies
+     * @param number the number of cookies
+     * @param pricePer12 the price per 12 cookies
      */
     public Cookie(String name, int number, int pricePer12)
     {

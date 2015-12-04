@@ -13,10 +13,10 @@ public class Candy extends DessertItem{
     
     
 /**
- * 
- * @param name
- * @param weight
- * @param pricePerLbs 
+ * Creates the candy
+ * @param name the name of the candy
+ * @param weight the weight of the candy in pounds
+ * @param pricePerLbs the price per pound
  */
     public Candy(String name, double weight, int pricePerLbs)
     {
