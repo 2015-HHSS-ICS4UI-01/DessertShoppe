@@ -5,7 +5,7 @@
  * the price per dozen cookies. 
  * The number and price per dozen are used to calculate the cost of the cookies.
  * 
- * @author YOURNAMEHERE
+ * @author SnowyCAN
  */
 public class Cookie extends DessertItem {
     private int numberOfCookie;

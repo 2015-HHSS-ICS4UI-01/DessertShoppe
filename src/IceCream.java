@@ -3,7 +3,7 @@
  * 
  * IceCream has a name, and a cost associated with it.
  * 
- * @author YOURNAMEHERE
+ * @author SnowyCAN
  */
 public class IceCream extends DessertItem{
     private int cost;
