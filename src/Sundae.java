@@ -9,22 +9,50 @@
  * 
  * Remember, we can use IceCream to do some of the heavy lifting for us!
  * 
- * @author YOURNAMEHERE
+ * @author thompsont
  */
-public class Sundae{
+public class Sundae extends IceCream{
     
+    private String name;
+    private int cost;
 
-    
+    /**
+     * Creates a new Sundae item
+     * @param icName name of the ice cream
+     * @param icCost cost of the ice cream
+     * @param toppingName name of the topping
+     * @param toppingCost cost of the topping
+     */
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
+       super(icName, icCost);
+       this.cost = toppingCost;
+       this.name = toppingName;
+       cost = cost + super.getCost();
     }
     
 
-    
+    /**
+     * Returns the information about the sundae and its price
+     * @return information about the sundae and price
+     */
     public String toString()
     {
-        return "";
+         String name = super.getName();
+       String output = "";
+       int widthItem = DessertShoppe.RECEIPT_WIDTH - name.length();
+       output += this.name + " with \n" ;
+         output += super.getName() + String.format("%" + widthItem + "s", 
+                 DessertShoppe.cents2dollarsAndCents(cost)); 
+        return output;
+    }
+    /**
+     * Returns cost of the Sundae
+     * @return cost of the Sundae 
+     */
+     @Override
+    public int getCost() {
+        return cost;
     }
     
 }
