@@ -13,13 +13,6 @@ public abstract class DessertItem {
   private String name;
   
 /**
- * Null constructor for DessertItem class
- */
-  public DessertItem() {
-    this("");
-  }
-  
-/**
  * Initializes DessertItem data
  * @param name The name of the dessert item being created.
  */   
