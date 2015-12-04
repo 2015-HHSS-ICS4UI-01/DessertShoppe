@@ -32,6 +32,7 @@ public class Sundae extends IceCream{
     public String toString()
     {
         String output = "\n";
+        output += icCost +   "\n";
         output += super.getName() + "\n";
         return output;
     }
@@ -41,9 +42,12 @@ public class Sundae extends IceCream{
     }
     
     public int getToppingCost(){
-        int cost = (int)Math.round(toppingCost + icCost/100.0);
-        return cost;
+        return toppingCost;
         
+    }
+    
+    public int getCost() {
+        return this.icCost+toppingCost/100;
     }
  
 }
