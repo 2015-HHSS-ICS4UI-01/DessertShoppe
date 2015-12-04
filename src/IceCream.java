@@ -23,7 +23,12 @@ public class IceCream extends DessertItem{
     
     public String toString()
     {
-     return "";
+        String costOfStuff = DessertShoppe.cents2dollarsAndCents(cost);
+        String Output = "";
+        Output = super.getName();
+        int widthPreTax = DessertShoppe.RECEIPT_WIDTH - Output.length();
+        Output += String.format("%" + widthPreTax + "s", costOfStuff);
+     return Output;
     }
     
 }

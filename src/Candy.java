@@ -11,22 +11,21 @@ public class Candy extends DessertItem{
     private double weight;
     private int cost;
 
-
+    //constructor for candy
     public Candy(String name, double weight, int pricePerLbs)
     {
         super(name);
         this.weight = weight;
         this.pricePerLbs = pricePerLbs;
+        //make the cost of everything
+        int temp = (int)(Math.floor(weight))*pricePerLbs;
+        int tempe = (int)Math.round((weight - (Math.floor(weight)))*pricePerLbs);
+        this.cost = temp + tempe;
+
     }
     
     @Override
     public int getCost(){
-        int temp = (int)(Math.floor(weight))*pricePerLbs;
-        System.out.println(temp + "------");
-        int tempe = (int)Math.round((weight - (Math.floor(weight)))*pricePerLbs);
-        System.out.println(tempe + "+++++");
-        cost = temp + tempe;
-        System.out.println(cost+ "====");
         return cost;
     }
 
@@ -34,12 +33,13 @@ public class Candy extends DessertItem{
     
     public String toString()
     {
+       //
+       String costOfStuff = DessertShoppe.cents2dollarsAndCents(cost);
        String Output = "";
        Output = weight + " lbs." + " @ $" + DessertShoppe.cents2dollarsAndCents(pricePerLbs) + "/lb.\n";
-       Output += super.getName() + DessertShoppe.cents2dollarsAndCents(cost);
-       return Output;
-       String preTax = DessertShoppe.cents2dollarsAndCents(preCost);
-        int widthPreTax = DessertShoppe.RECEIPT_WIDTH - 8;
-        output += String.format("%" + widthPreTax + "s%n", preTax);
+       Output += super.getName();
+       int widthPreTax = DessertShoppe.RECEIPT_WIDTH - super.getName().length();
+       Output += String.format("%" + widthPreTax + "s", costOfStuff);
+       return Output;        
     }
 }
