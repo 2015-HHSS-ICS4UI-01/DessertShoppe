@@ -33,7 +33,7 @@ public class Sundae extends IceCream{
     {
         String output = "\n";
         output += "Name: " + super.getName() + "\n";
-        return "";
+        return output;
     }
     
     public String getToppingName(){

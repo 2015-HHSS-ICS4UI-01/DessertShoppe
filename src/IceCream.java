@@ -18,8 +18,9 @@ public class IceCream extends DessertItem {
     @Override
     public String toString() {
         String output = "\n";
+        output += icCost +   "\n";
         output += "Name: " + super.getName() + "\n";
-        return "";
+        return output;
     }
 
     public int getCost() {

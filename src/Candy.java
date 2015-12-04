@@ -24,7 +24,7 @@ public class Candy extends DessertItem{
     public String toString()
     {
         String output = "\n";
-        output += weight + "   " + pricePerLbs + "\n";
+        output += weight + " lbs. $" + pricePerLbs + "/lb\n";
         output += super.getName() + "   " + getCost() + "\n";
         return output;
 //       return "";

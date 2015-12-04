@@ -25,8 +25,9 @@ public class Cookie extends DessertItem{
     public String toString()
     {
         String output = "\n";
+        output += number + " lbs. $" + pricePer12 + "/dz\n";
         output += "Name: " + super.getName() + "\n";
-        return "";
+        return output;
     }
 
     public int getNumber() {
