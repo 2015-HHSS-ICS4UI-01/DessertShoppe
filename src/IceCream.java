@@ -31,7 +31,7 @@ public class IceCream extends DessertItem {
     }
 
     /**
-     * Get the cost of the cookies in cents
+     * Get the cost of the ice cream in cents
      *
      * @return The cost of the ice cream
      */
