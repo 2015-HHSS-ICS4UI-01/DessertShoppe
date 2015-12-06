@@ -11,7 +11,12 @@ public class Candy extends DessertItem{
     private double weight;
     private int cost;
 
-    //constructor for candy
+    /**
+     * constructs the candy
+     * @param name name of the candy
+     * @param weight how much the candy weighs in pounds
+     * @param pricePerLbs the price per pounds
+     */
     public Candy(String name, double weight, int pricePerLbs)
     {
         super(name);
@@ -24,13 +29,19 @@ public class Candy extends DessertItem{
 
     }
     
+    /**
+     * gets the cost of the candy
+     * @return the cost
+     */
     @Override
     public int getCost(){
         return cost;
     }
-
- 
     
+    /**
+     * the output for the receipt 
+     * @return the output
+     */
     public String toString()
     {
        //

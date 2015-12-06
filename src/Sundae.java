@@ -16,7 +16,13 @@ public class Sundae extends IceCream{
     private int toppingCost;
     public int cost;
 
-    
+    /**
+     * makes the sundae
+     * @param icName ice cream name
+     * @param icCost ice cream cost
+     * @param toppingName topping name
+     * @param toppingCost topping cost
+     */
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
        super(icName,icCost);
@@ -25,10 +31,18 @@ public class Sundae extends IceCream{
        this.cost = super.getCost() + toppingCost;
     }
     
+    /**
+     * gets the cost of the ice cream
+     * @return the cost
+     */
     public int getCost(){
         return cost;
     }
     
+    /**
+     * gets the output for the receipt
+     * @return the output
+     */
     public String toString()
     {
         String costOfStuff = DessertShoppe.cents2dollarsAndCents(cost);

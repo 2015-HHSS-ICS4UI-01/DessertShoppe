@@ -12,6 +12,12 @@ public class Cookie extends DessertItem{
     private int pricePer12;
     private int cost;
     
+    /**
+     * makes the cookie
+     * @param name name of the cookie
+     * @param number the number of cookies
+     * @param pricePer12 price per 12 cookies
+     */
     public Cookie(String name, int number, int pricePer12)
     {
         super(name);
@@ -25,12 +31,19 @@ public class Cookie extends DessertItem{
         }
     }
     
+    /**
+     * gets the cost of the cookies
+     * @return the cost
+     */
     @Override
     public int getCost(){
         return cost;
-        
     }
     
+    /**
+     * the output for the receipt
+     * @return the output
+     */
     public String toString()
     {
        String costOfStuff = DessertShoppe.cents2dollarsAndCents(cost);
