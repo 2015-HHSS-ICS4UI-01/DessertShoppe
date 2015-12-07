@@ -7,9 +7,8 @@
  * the assignment. Feel free to change this file up if you want to test other
  * parts.
  *
- * @author lamonta
+ * @author muirw5809
  */
-
 public class TestShoppe {
 
     public static void main(String[] args) {
@@ -32,7 +31,7 @@ public class TestShoppe {
         // print a few spaces between the runs
         System.out.println("\n\n");
 
-        // adds some new items to the till
+        //adds some new items to the till
         checkout.enterItem(new IceCream("Strawberry Ice Cream", 145));
         checkout.enterItem(new Sundae("Vanilla Ice Cream", 105, "Caramel", 50));
         checkout.enterItem(new Candy("Gummy Worms", 1.33, 89));
