@@ -9,17 +9,20 @@
  * @author muirw5809
  */
 public class Cookie extends DessertItem {
+
     private int number;
     private int pricePer12;
 
     public Cookie(String name, int number, int pricePer12) {
+        //get the name of the cookie
         super(name);
+        //find the amount of cookies being bought
         this.number = number;
+        //get the price per 12 cookies
         this.pricePer12 = pricePer12;
     }
 
     public String toString() {
-        String n = DessertShoppe.cents2dollarsAndCents(this.getCost());
         int widthPreTax = DessertShoppe.RECEIPT_WIDTH - this.getName().length();
         String output = "";
         output += number;
@@ -31,7 +34,9 @@ public class Cookie extends DessertItem {
 
     @Override
     public int getCost() {
+        //divide the number of cookie by 12 and multiply that number by the price per 12 cookies
         double cost = Math.round((number / 12.0) * this.pricePer12);
+        //return that cost
         return (int) cost;
     }
 }

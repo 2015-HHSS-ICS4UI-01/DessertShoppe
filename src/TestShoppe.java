@@ -22,7 +22,7 @@ public class TestShoppe {
         checkout.enterItem(new Sundae("Choc. Chip Ice Cream", 145, "Hot Fudge", 50));
         checkout.enterItem(new Cookie("Oatmeal Raisin Cookies", 4, 399));
 
-        // prints ou the receipt
+        // prints out the receipt
         System.out.println(checkout);
 
         // clear the till

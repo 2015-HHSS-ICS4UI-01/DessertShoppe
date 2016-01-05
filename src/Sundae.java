@@ -10,18 +10,22 @@
  *
  * @author muirw5809
  */
+//get acces to the icecream class
 public class Sundae extends IceCream {
+
     private String toppingName;
     private int toppingCost;
 
     public Sundae(String icName, int icCost, String toppingName, int toppingCost) {
+        //get icecream name and icecream cost
         super(icName, icCost);
+        //get topping cost
         this.toppingCost = toppingCost;
+        //get topping name
         this.toppingName = toppingName;
     }
 
     public String toString() {
-        String n = DessertShoppe.cents2dollarsAndCents(this.getCost());
         int widthPreTax = DessertShoppe.RECEIPT_WIDTH - this.getName().length();
         String output = "";
         output += this.toppingName + " Sunday with \n" + this.getName();
@@ -31,7 +35,9 @@ public class Sundae extends IceCream {
 
     @Override
     public int getCost() {
+        //add the topping cost to the icecream cost
         int cost = this.toppingCost + super.getCost();
+        //return that cost
         return cost;
     }
 }
