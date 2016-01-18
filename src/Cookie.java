@@ -7,18 +7,37 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Cookie {
+public class Cookie extends DessertItem{
     
+    private int number;
+    private int pricePer12;
     
     public Cookie(String name, int number, int pricePer12)
     {
+        super(name);
+        this.number = number;
+        this.pricePer12 = pricePer12;
         
     }
 
     
+    @Override
     public String toString()
     {
-        return "";
+        String output = "\n";
+        output += number + " lbs. $" + pricePer12 + "/dz\n";
+        output += super.getName() + "   " + getCost() + "\n";
+        return output;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+    
+    public int getCost() {
+        double cookie = pricePer12 / 12;
+        int cost = (int)Math.round(number * cookie/100.0);
+        return cost;
     }
     
 }

@@ -11,20 +11,43 @@
  * 
  * @author YOURNAMEHERE
  */
-public class Sundae{
+public class Sundae extends IceCream{
     
+    private String toppingName;
+    private int toppingCost;
+    private int icCost;
 
     
     public Sundae(String icName, int icCost, String toppingName, int toppingCost)
     {
-       
-    }
+       super(icName,icCost);
+       this.toppingName = toppingName;
+       this.toppingCost = toppingCost;
+    }   
+    
     
 
     
+    @Override
     public String toString()
     {
-        return "";
+        String output = "\n";
+        output += icCost +   "\n";
+        output += super.getName() + "\n";
+        return output;
     }
     
+    public String getToppingName(){
+        return this.toppingName;
+    }
+    
+    public int getToppingCost(){
+        return toppingCost;
+        
+    }
+    
+    public int getCost() {
+        return this.icCost+toppingCost/100;
+    }
+ 
 }
